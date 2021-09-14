@@ -1,3 +1,8 @@
+<?php 
+/*
+Template Name: Undersida 4
+*/ 
+?>
 <?php get_header();?>
 		<main>
 			<section>
@@ -10,7 +15,7 @@
 							<p>Sed pretium metus in urna vehicula imperdiet. Fusce at odio vitae felis maximus tincidunt. Nunc porttitor ex a elementum dictum. Maecenas eget arcu nulla. Cras auctor dui aliquet, condimentum orci vel, venenatis nisl. Ut semper magna urna, ac congue dui cursus vitae. Nam sed pharetra leo, vel tincidunt est. Phasellus volutpat tortor nec nulla feugiat congue. Donec quis ligula varius, euismod nisl eu, aliquet metus. Aliquam tempus iaculis odio, sed volutpat mi aliquam aliquet.</p>
 						</div>
 						<div class="col-xs-12 col-sm-4 col-md-6">
-							<img src="img/photo.jpg" />
+							<img src="<?php echo get_home_url();?>/wp-content/uploads/2021/09/photo.jpg" />
 						</div>
 					</div>
 				</div>

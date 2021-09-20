@@ -1,7 +1,5 @@
-
-<?
-/* infogar headern*/
-php get_header();?>
+<!-- infogar headern-->
+<?php get_header();?>
 
 		<main>
 			<section>
@@ -110,20 +108,15 @@ php get_header();?>
 										<h2>Arkiv</h2>
 										<ul>
 											<li>
-												<a href="arkiv.html">oktober 2016</a>
+												<!-- visar upp inlägg för oktober -->
+												<a href="<?php echo get_home_url();?>/index.php/blogg?m=201610">oktober 2016</a>
 											</li>
 										</ul>
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>
-										<ul>
-											<li class="cat-item">
-												<a href="">Natur</a> (1)
-											</li>
-											<li class="cat-item">
-												<a href="">Okategoriserade</a> (3)
-											</li>
-										</ul>
+										<!-- visar menyn för kategorier -->
+										<?php wp_nav_menu( array('theme_location' => 'blogg-categories', 'container' => 'ul', 'container_class' => 'side-menu') ); ?>
 									</li>
 								</ul>
 							</div>
@@ -132,6 +125,5 @@ php get_header();?>
 				</div>
 			</section>
 		</main>
-<?php
-/*infogar footern */
-get_footer();
+		<!-- infogar footern -->
+<?php get_footer(); ?>

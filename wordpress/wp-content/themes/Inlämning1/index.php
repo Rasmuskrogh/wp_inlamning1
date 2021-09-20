@@ -3,6 +3,7 @@
 Template Name: Index
 */
 ?>
+<!-- hämtar header -->
 <?php get_header();?>
 
 		<main>
@@ -11,6 +12,7 @@ Template Name: Index
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="hero">
+                                <!-- hämtar hem url och sedan bilden från wp -->
 								<img src="<?php echo get_home_url();?>/wp-content/uploads/2021/09/city.jpg" />
 								<div class="text">
 									<h1>Hej och välkommen!</h1>
@@ -23,4 +25,5 @@ Template Name: Index
 			</section>
 		</main>
 
+        <!-- hämtar footer -->
 <?php get_footer();?>

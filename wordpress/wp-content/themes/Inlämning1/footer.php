@@ -47,6 +47,7 @@
 	</div>
 
 	<script src="js/script.js"></script>
+    <!--kör footer action-->
     <?php wp_footer();?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+/* registerar och enquear css och js*/
 function rka_enqueue() {
 
    $uri = get_theme_file_uri();

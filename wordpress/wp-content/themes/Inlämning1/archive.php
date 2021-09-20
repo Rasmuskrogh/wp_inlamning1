@@ -1,10 +1,7 @@
-<?php 
-/*
-Template Name: Blogg
-*/
-?>
-<!-- hämtar header -->
-<?php get_header();?>
+
+<?
+/* infogar headern*/
+php get_header();?>
 
 		<main>
 			<section>
@@ -12,7 +9,7 @@ Template Name: Blogg
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
 							<h1>Blogg</h1>
-							<!-- kör loopen för att loopa inlägg -->
+							<!-- loopen -->
 							<?php if (have_posts()) :
  
 								while (have_posts()) : the_post();
@@ -47,10 +44,11 @@ Template Name: Blogg
 
 								<nav class="navigation pagination">
 								<?php
+								
 								global $wp_query;
 								
 								$big = 999999999; // need an unlikely integer
-								/* paginatation */
+								/* pagination */
 								echo paginate_links(array(
 								'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 								'format' => '?paged=%#%',
@@ -65,28 +63,67 @@ Template Name: Blogg
 							<div id="sidebar">
 								<ul>
 									<li>
-									<?php get_search_form(); ?>
+										<form id="searchform" class="searchform">
+											<div>
+												<label class="screen-reader-text">Sök efter:</label>
+												<input type="text" />
+												<input type="submit" value="Sök" />
+											</div>
+										</form>
 									</li>
 								</ul>
 								<ul role="navigation">
 									<li class="pagenav">
 										<h2>Sidor</h2>
-										<!-- visar sidomenyn för bloggen -->
-										<?php wp_nav_menu( array('theme_location' => 'blogg-pages', 'container' => 'ul', 'container_class' => 'side-menu') ); ?>
+										<ul>
+											<li class="page_item current_page_item">
+												<a href="">Blogg</a>
+											</li>
+											<li class="page_item">
+												<a href="">Exempelsida</a>
+											</li>
+											<li class="page_item">
+												<a href="">Kontakt</a>
+											</li>
+											<li class="page_item page_item_has_children">
+												<a href="">Om mig</a>
+												<ul class="children">
+													<li class="page_item">
+														<a href="">Intressen</a>
+													</li>
+													<li class="page_item page_item_has_children">
+														<a href="">Portfolio</a>
+														<ul class="children">
+															<li class="page_item">
+																<a href="">Projekt 1</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="page_item">
+												<a href="">Startsida</a>
+											</li>
+										</ul>
 									</li>
 									<li>
 										<h2>Arkiv</h2>
 										<ul>
 											<li>
-												<!-- visar upp inlägg för oktober -->
-												<a href="<?php echo get_home_url();?>/index.php/blogg?m=201610">oktober 2016</a>
+												<a href="arkiv.html">oktober 2016</a>
 											</li>
 										</ul>
 									</li>
 									<li class="categories">
 										<h2>Kategorier</h2>
-										<!-- visar menyn för kategorier -->
-										<?php wp_nav_menu( array('theme_location' => 'blogg-categories', 'container' => 'ul', 'container_class' => 'side-menu') ); ?>
+										<ul>
+											<li class="cat-item">
+												<a href="">Natur</a> (1)
+											</li>
+											<li class="cat-item">
+												<a href="">Okategoriserade</a> (3)
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</div>
@@ -95,5 +132,6 @@ Template Name: Blogg
 				</div>
 			</section>
 		</main>
-		<!-- hämtar footer-->
-<?php get_footer();
+<?php
+/*infogar footern */
+get_footer();

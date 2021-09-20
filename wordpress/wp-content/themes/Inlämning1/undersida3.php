@@ -3,6 +3,7 @@
 Template Name: Undersida 3
 */ 
 ?>
+<!-- hämtar header -->
 <?php get_header();?>
 		<main>
 			<section>
@@ -20,4 +21,5 @@ Template Name: Undersida 3
 				</div>
 			</section>
 		</main>
+        <!-- hämtar footer -->
 <?php get_footer();?>

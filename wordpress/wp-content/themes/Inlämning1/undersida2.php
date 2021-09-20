@@ -3,6 +3,7 @@
 Template Name: Undersida 2
 */ 
 ?>
+<!-- hämtar header -->
 <?php get_header();?>
 
 		<main>
@@ -18,23 +19,12 @@ Template Name: Undersida 2
 							<p>Proin imperdiet imperdiet lacus, eu dignissim nunc rutrum sit amet. Proin purus dui, tempor a mi at, congue ultrices nibh. Nulla in turpis et turpis porttitor blandit sed vitae quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dui at lacus molestie varius sit amet eu nibh. Donec dolor massa, sollicitudin vitae urna dignissim, porta ornare velit. Nunc non tellus elit. Suspendisse ut risus eu sem sagittis sodales. Sed sed lacinia turpis. Proin nec ex ante. Nulla quis est laoreet, aliquam eros eget, venenatis sem. Morbi nulla dui, bibendum eget lacinia et, placerat ac sapien. Morbi tincidunt blandit erat ut accumsan.</p>
 						</div>
 						<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
-							<ul class="side-menu">
-								<li>
-									<a href="undersida.html">Undersida</a>
-								</li>
-								<li>
-									<a href="undersida2.html">Undersida 2</a>
-								</li>
-								<li>
-									<a href="undersida3.html">Undersida 3</a>
-								</li>
-								<li>
-									<a href="undersida4.html">Undersida 4</a>
-								</li>
-							</ul>
+                            <!-- visar menyn för undersidor -->
+                            <?php wp_nav_menu( array('theme_location' => 'undersida-menu', 'container' => 'ul', 'container_class' => 'side-menu') ); ?>
 						</aside>
 					</div>
 				</div>
 			</section>
 		</main>
+        <!-- hämtar footer -->
 <?php get_footer();?>

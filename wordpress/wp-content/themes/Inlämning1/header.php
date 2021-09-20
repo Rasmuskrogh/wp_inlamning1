@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>Labb 1</title>
 	<script src="js/jquery.js"></script>
+    <!-- kör header action --> 
     <?php wp_head();?>
 </head>
 <body>
@@ -17,6 +18,7 @@
 						<a class="logo" href="index.html">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
+                    <!-- lägger till en fungerande sökfunktion -->
                     <?php get_search_form(); ?>
 					</div>
 					<div class="col-xs-4 text-right visible-xs">
@@ -44,7 +46,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						
+						<!-- visar den korrekta fungerande navmenyn i headern -->
                         <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => 'ul', 'container_class' => 'menu') ); ?>
 						
                         </div>

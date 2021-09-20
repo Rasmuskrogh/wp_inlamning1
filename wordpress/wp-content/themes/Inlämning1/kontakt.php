@@ -3,6 +3,7 @@
 Template Name: Kontakt
 */
 ?>
+<!-- hämtar header -->
 <?php get_header();?>
 		<main>
 			<section>
@@ -24,4 +25,5 @@ Template Name: Kontakt
 				</div>
 			</section>
 		</main>
+        <!-- hämtar footer -->
 <?php get_footer();?>
